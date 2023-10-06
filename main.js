@@ -1,15 +1,12 @@
-// Get the form element
 const form = document.querySelector('#form');
 
-// Get the input elements
 const usernameInput = document.querySelector('#username');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirmPassword');
 
-// Add event listener to the form on submit
 form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     validateUsername();
     validateEmail();
@@ -20,7 +17,6 @@ form.addEventListener('submit', function (event) {
         showSuccessMessage();
     }
 });
-
 
 function validateUsername() {
     const username = usernameInput.value.trim();
@@ -84,7 +80,6 @@ function showError(input, message) {
     msg.style.opacity = '1';
 }
 
-// Function to show success message and add success class
 function showSuccess(input, message) {
     const parent = input.parentElement;
     const msg = parent.querySelector('.msg');
@@ -96,7 +91,6 @@ function showSuccess(input, message) {
     msg.style.opacity = '1';
 }
 
-// Function to validate email using regex
 function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
@@ -111,13 +105,10 @@ function allFieldsValid() {
     );
 }
 
-// Function to show success message
 function showSuccessMessage() {
-    // Create a new element for the success message
     const successMessage = document.createElement('div');
     successMessage.classList.add('success-message');
     successMessage.innerText = 'All fields are valid. Form submitted successfully.';
 
-    // Insert the success message above the form
     form.insertAdjacentElement('beforebegin', successMessage);
 }
