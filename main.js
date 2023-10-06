@@ -111,4 +111,7 @@ function showSuccessMessage() {
     successMessage.innerText = 'All fields are valid. Form submitted successfully.';
 
     form.insertAdjacentElement('beforebegin', successMessage);
+    console.log(usernameInput);
+    console.log(emailInput);
+    console.log(passwordInput);
 }
