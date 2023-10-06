@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("Moon.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(30px);
+}
+
+.container{
+  padding: 30px 40px;
+  width: 420px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.container h1{
+  font-weight: bold;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.container .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 40px 5px; 
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  font-size: 1em;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+.input-box i{
+  position: absolute;
+  right: 1.25rem;
+  top: 33%;
+  font-size: 20px;
+}
+
+.container .btn{
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  color: white;
+  box-shadow: 0px 0px 20px rgba(49, 49, 49, 0.26);
+  background: rgba(205, 104, 246, 0.8);
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.container .btn:hover{
+  transform: scale(1.01);
+  background:rgba(18, 204, 246, 0.7);
+}
+
+.container .login-link{
+  font-size: 14.5px;
+  margin: -15px 15px 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.login-link a:hover{
+  text-decoration: underline;
+}
+
+.input-box .msg{
+  padding: 10px;
+  opacity: 0;
+}
+
+.error input {
+  border: 2px solid rgb(230, 93, 93);
+  color: rgb(230, 93, 93);
+}
+
+.error .msg {
+  opacity: 1;
+  color: rgb(230, 93, 93);
+}
+
+.success input{
+  border: 2px solid rgb(170, 234, 170);
+  color: rgb(170, 234, 170);
+}
+
+.success-message {
+  background-color: #dff0d8;
+  text-align: center;
+  color: #3c763d;
+  padding: 10px;
+  margin-bottom: 10px;
+}
