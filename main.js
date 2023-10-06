@@ -80,7 +80,7 @@ function showError(input, message) {
     msg.style.opacity = '1';
 }
 
-function showSuccess(input, message) {
+function showSuccess(input) {
     const parent = input.parentElement;
     const msg = parent.querySelector('.msg');
 
@@ -93,7 +93,7 @@ function showSuccess(input, message) {
 
 function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+    return email.match(regex);
 }
 
 function allFieldsValid() {
